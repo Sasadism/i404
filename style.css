@@ -1,14 +1,44 @@
-body {
-  background: #111;
-  color: white;
-  font-family: Arial;
-  padding: 20px;
+body{
+  background:#0f172a;
+  color:white;
+  font-family:Arial,sans-serif;
+  margin:0;
 }
 
-button {
-  background: #222;
-  color: white;
-  border: 1px solid #444;
-  padding: 10px;
-  margin-right: 5px;
+.header{
+  background:#111827;
+  padding:15px;
+  font-size:24px;
+  font-weight:bold;
+}
+
+.sidebar{
+  width:220px;
+  background:#1e293b;
+  height:100vh;
+  position:fixed;
+  padding-top:20px;
+}
+
+.sidebar a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:12px 20px;
+}
+
+.sidebar a:hover{
+  background:#334155;
+}
+
+.main{
+  margin-left:240px;
+  padding:20px;
+}
+
+.card{
+  background:#1e293b;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:15px;
 }
