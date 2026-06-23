@@ -5,7 +5,15 @@
 <title>i404 Panel</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
+  
+<script>
+fetch('/users')
+.then(r => r.json())
+.then(data => {
+  document.getElementById('totalUsers').innerText = data.total;
+});
+</script>
+  
 <body>
 
 <div class="header">
@@ -24,7 +32,7 @@
 
   <div class="card">
     <h2>Total Users</h2>
-    <p>0</p>
+    <p> <p id="totalUsers">Loading...</p></p>
   </div>
 
   <div class="card">
