@@ -8,6 +8,7 @@ HELLO-SASA-404
 <link rel="stylesheet" href="style.css">
 
 </head>
+<h1>SASA TEST</h1>  
 <body>
 
 <div class="header">
@@ -36,31 +37,6 @@ HELLO-SASA-404
   </div>
 
 </div>
-
-<script>
-
-.then(r => r.json())
-.then(users => {
-
-  let html = '';
-
-  users.forEach(user => {
-
-    html += `
-      <div class="card">
-        <b>${user.username}</b><br>
-        Traffic: ${user.traffic} GB<br>
-        Expire: ${user.expire_days} Days
-      </div>
-    `;
-
-  });
-
-  document.getElementById('usersList').innerHTML = html;
-
-});
-
-</script>
 
 </body>
 </html>
