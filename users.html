@@ -9,6 +9,32 @@ HELLO-SASA-404
 
 </head>
 <h1>SASA TEST</h1>  
+<script>
+fetch('/allusers')
+.then(r => r.json())
+.then(users => {
+
+  let html = '';
+
+  users.forEach(user => {
+
+    html += `
+      <div class="card">
+        <b>${user.username}</b><br>
+        Traffic: ${user.traffic} GB<br>
+        Expire: ${user.expire_days} Days
+      </div>
+    `;
+  });
+
+  document.getElementById('usersList').innerHTML = html;
+
+})
+.catch(err => {
+  document.getElementById('usersList').innerHTML = err;
+});
+  </script>  
+  
 <body>
 
 <div class="header">
